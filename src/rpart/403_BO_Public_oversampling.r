@@ -130,7 +130,7 @@ ArbolSimple <- function( data, param, iteracion) {
   tablita[ , Predicted := 0L ]
   tablita[ 1:param2$corte, Predicted := 1L ]
 
-  nom_submit <- paste0("z402_", sprintf( "%03d", iteracion ), ".csv" )
+  nom_submit <- paste0("z403_", sprintf( "%03d", iteracion ), ".csv" )
   fwrite( tablita[ , list(numero_de_cliente, Predicted)],
           file= nom_submit,
           sep= "," )
